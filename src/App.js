@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './Pages/Home';
+import Mitra from './Pages/Mitra';
+import DetailMitra from './Pages/DetailMitra';
+import Berita from './Pages/Berita';
+import DetailBerita from './Pages/DetailBerita';
+import Profil from './Pages/Profil';
+import Masuk from './Pages/Masuk';
+import Daftar from './Pages/Daftar';
+import RiwayatPoin from './Pages/RiwayatPoin';
+import Tukar from './Pages/Tukar';
+import Riwayat from './Pages/Riwayat';
+import Dashboard from './Pages/Dashboard';
+import Permintaan from './Pages/Permintaan';
+import Galeri from './Pages/Galeri';
+import Penjemputan from './Pages/Penjemputan';
+
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/beranda" element={<Home />} />
+        <Route path="/mitra" element={<Mitra />} />
+        <Route path="/mitra/:id_mitra" element={<DetailMitra />} />
+        <Route path="/berita" element={<Berita />} />
+        <Route path="/berita/:id_berita" element={<DetailBerita />} />
+        <Route path="/profil/:id_user" element={<Profil />} />
+        <Route path="/masuk" element={<Masuk />} />
+        <Route path="/daftar" element={<Daftar />} />
+        <Route path="/riwayatPoin" element={<RiwayatPoin />} />
+        <Route path="/tukar" element={<Tukar />} />
+        <Route path="/riwayat" element={<Riwayat />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/permintaan" element={<Permintaan />} />
+        <Route path="/galeri" element={<Galeri />} />
+        <Route path="/penjemputan" element={<Penjemputan />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
