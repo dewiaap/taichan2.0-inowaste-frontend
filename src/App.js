@@ -25,7 +25,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/beranda" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/mitra" element={<Mitra />} />
         <Route path="/mitra/:id_mitra" element={<DetailMitra />} />
         <Route path="/berita" element={<Berita />} />
