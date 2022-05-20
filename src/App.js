@@ -9,12 +9,14 @@ import Profil from './Pages/Profil';
 import Masuk from './Pages/Masuk';
 import Daftar from './Pages/Daftar';
 import RiwayatPoin from './Pages/RiwayatPoin';
-import Tukar from './Pages/Tukar';
+import TukarPoin from './Pages/TukarPoin';
 import Riwayat from './Pages/Riwayat';
 import Dashboard from './Pages/Dashboard';
 import Permintaan from './Pages/Permintaan';
 import Galeri from './Pages/Galeri';
 import Penjemputan from './Pages/Penjemputan';
+// import Voucher from './Pages/Voucher';
+import ProfilMitra from './Pages/ProfilMitra';  
 
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -23,7 +25,7 @@ import Sidebar from './Components/Sidebar';
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mitra" element={<Mitra />} />
@@ -34,9 +36,11 @@ function App() {
         <Route path="/masuk" element={<Masuk />} />
         <Route path="/daftar" element={<Daftar />} />
         <Route path="/riwayatPoin" element={<RiwayatPoin />} />
-        <Route path="/tukar" element={<Tukar />} />
+        <Route path="/tukarPoin" element={<TukarPoin />} />
+        {/* <Route path="/voucher/:id_voucher" element={<Voucher />} /> */}
         <Route path="/riwayat" element={<Riwayat />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profilmitra/:id_mitra" element={<ProfilMitra />} />
         <Route path="/permintaan" element={<Permintaan />} />
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/penjemputan" element={<Penjemputan />} />

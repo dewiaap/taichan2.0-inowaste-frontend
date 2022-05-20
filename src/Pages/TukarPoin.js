@@ -1,4 +1,4 @@
-const RiwayatPoin = () => {
+const Poin = () => {
     return (
         <>
         <div className="grid grid-cols-4 items mt-16 mb-28 mx-28 font-poppins">
@@ -23,29 +23,28 @@ const RiwayatPoin = () => {
                 </div>
 
                 <div className="grid grid-cols-2 text-md">
-                    <div className="border-b text-center py-1 border-primary border-b-2"><a href="#" className="text-primary font-bold">Riwayat</a></div>
-                    <div className="border-b text-center focus-within:border-primary focus-within:border-b-2 focus-within:text-primary focus-within:font-bold "><a href="#/tukarpoin">Tukar Poin</a></div>
+                    <div className="border-b text-center focus-within:text-primary focus-within:font-bold focus-within:border-primary focus-within:border-b-2"><a href="#/riwayatPoin">Riwayat</a></div>
+                    <div className="border-b text-center py-1 border-primary border-b-2"><a href="#" className="text-primary font-bold">Tukar Poin</a></div>
                 </div>
 
-                <div className="border-b border-gray-200">
-                    <div className="px-8 pt-2 pb-3 flex justify-between mt-2 mr-6">
-                    <div><p className="text-sm font-bold mb-1">Penukaran Voucher</p>
-                        <p className="text-xs text-gray-400">Nama Voucher</p></div>
-                        <div className="py-2"><p className="text-sm text-red-400">-500 Poin</p></div>
-                    </div>
-                </div>
+                <a href="#" className="cursor-pointer">
+                    <div className="box-border bg-white flex p-4 shadow-md mx-14 my-6 rounded-md gap-x-8">
+                        <img src="foto_voucher.png" alt="voucher" className="object-cover h-28 w-46 rounded">
+                        </img>
 
-                <div className="border-b border-gray-200">
-                    <div className="px-8 pt-2 pb-3 flex justify-between mt-2 mr-6">
-                    <div><p className="text-sm font-bold mb-1">Penukaran Minyak</p>
-                        <p className="text-xs text-gray-400">PT Green Energi Utama (GEU)</p></div>
-                        <div className="py-2"><p className="text-sm text-secondary">+200 Poin</p></div>
+                        <div className="">
+                            <p className="font-bold text-lg">SPOTIFY 1 BULAN</p>
+                            <p>Voucher langganan SPOTIFY 1 Bulan</p>
+                            <p className="text-secondary font-bold mt-8">5000 Poin</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+
+
             </div>
         </div>
         </>
     );
 }
 
-export default RiwayatPoin;
+export default Poin;
