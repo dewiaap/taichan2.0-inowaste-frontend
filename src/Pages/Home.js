@@ -16,7 +16,7 @@ const Home = () => {
         <div>
             <img src="vector_wave.png"></img>
         </div>
-        <div className="font-bold font-poppins text-primary text-6xl mt-16 mb-8 text-center">
+        <div className="font-bold font-poppins text-primary text-5xl mt-16 mb-8 text-center">
             <h1>Langkah Penukaran Minyak</h1>
         </div>
         <div className="flex justify-center mb-28">
@@ -36,7 +36,7 @@ const Home = () => {
                     2. Mengajak dan mengedukasi masyarakat menyalurkan minyak jelantah</p>
             </div>
         </div>
-        <div className="font-bold font-poppins text-primary text-6xl mt-16 mb-8 text-center">
+        <div className="font-bold font-poppins text-primary text-5xl mt-16 mb-8 text-center">
             <h1>Daftar Mitra</h1>
         </div>
         <div className="flex justify-center mb-20">
