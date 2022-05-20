@@ -5,10 +5,10 @@ const Profil = () => {
             <div className="box-border bg-white w-52 h-60 drop-shadow-md rounded-xl">
                 <div className="box-border bg-white border-b h-10"><p className="font-extrabold ml-6 mt-6 text-md">Hi, Arum!</p></div>
                 <ul className="mx-6 my-4 justify-between text-sm">
-                    <li className="mb-3 font-semibold">Akun Saya</li>
-                    <li className="mb-3">Poin Saya</li>
-                    <li className="mb-3">Riwayat Transaksi</li>
-                    <li className="mb-3">Log Out</li>
+                    <li className="mb-3"><a href="">Akun Saya</a></li>
+                    <li className="mb-3"><a href="#">Poin Saya</a></li>
+                    <li className="mb-3 font-semibold"><a href="#">Riwayat Transaksi</a></li>
+                    <li className="mb-3"><a href="#">Log Out</a></li>
                 </ul>
             </div>
             <div className="container col-start-2 col-span-4 box-border bg-white w-110 h-auto border border-2 rounded-lg justify-between py-8 px-12 shadow-md">
