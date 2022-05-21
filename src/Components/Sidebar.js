@@ -1,4 +1,4 @@
-const Sidebar = () => {
+const Sidebar = ({children}) => {
     return (
         <>
         <div className="flex ">
@@ -45,7 +45,7 @@ const Sidebar = () => {
             </div>
 
             <div>
-                Konten
+                {children}
             </div>
         </div>
         

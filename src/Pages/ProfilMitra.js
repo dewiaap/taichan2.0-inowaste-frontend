@@ -4,7 +4,9 @@ const ProfilMitra = () => {
     return (
         <>
         {/* <div className="bg-gray-100"> */}
-        <Sidebar/>
+        <Sidebar>
+            <div>isi disini</div>
+        </Sidebar>
         {/* <div>test</div>
         </div> */}
         
