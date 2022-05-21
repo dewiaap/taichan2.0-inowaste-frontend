@@ -3,9 +3,11 @@ import Sidebar from '../Components/Sidebar';
 const ProfilMitra = () => {
     return (
         <>
-        <div className="flex"></div>
-        <div><Sidebar/></div>
-        {/* <div>profil</div> */}
+        {/* <div className="bg-gray-100"> */}
+        <Sidebar/>
+        {/* <div>test</div>
+        </div> */}
+        
         </>
     );
 }

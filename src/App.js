@@ -45,7 +45,7 @@ function App() {
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/penjemputan" element={<Penjemputan />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
