@@ -5,12 +5,12 @@ const ProfilMitra = () => {
         <>
         <Sidebar>
             <div className="font-poppins mx-12 mt-6 pb-12">
-                <div className="flex justify-between place-items-center">
+                <div className="flex justify-between place-items-center mb-8">
                     <p className="font-bold text-lg">Profil Perusahaan</p>
                     <button className="bg-tertiary text-white rounded-full font-bold px-6 py-2">Edit Profil</button>
                 </div>
 
-                <div className="grid grid-cols-5 bg-white shadow-md max-h-full p-12 mt-8 font-poppins rounded-xl">
+                <div className="grid grid-cols-5 bg-white shadow-md max-h-full p-12 font-poppins rounded-xl">
                     <div>
                         <img src="logoGEU.png" alt="photo" className='object-cover h-28'></img>
                     </div>
