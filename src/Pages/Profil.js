@@ -36,7 +36,7 @@ const Profil = () => {
                         </div>
                 </div>
                     <div className="text-right mr-10 mt-6">
-                            <button className="py-2 px-6 rounded-full bg-secondary text-white font-poppins text-md font-bold text-center ">Simpan</button>
+                            <button className="py-2 px-6 rounded-full bg-secondary text-white font-poppins text-md font-bold text-center hover:bg-secondarydark">Simpan</button>
                         </div>
             </div>
         </div>
