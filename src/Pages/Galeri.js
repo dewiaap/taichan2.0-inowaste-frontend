@@ -1,6 +1,6 @@
 import Sidebar from "../Components/Sidebar";
 
-const Galeri = () => {
+const Galeri = () => {{
     const targetE1 = document.getElementById('dropdownMenu');
     const triggerEl = document.getElementById('dropdownButton');
     const options = {
@@ -87,6 +87,6 @@ const Galeri = () => {
         </Sidebar>
         </>
     );
-}
+    }
 
 export default Galeri;

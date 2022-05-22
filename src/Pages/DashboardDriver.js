@@ -1,5 +1,6 @@
 import Sidebar from "../Components/Sidebar";
-const Dashboard = () => {
+
+const DashboardDriver = () => {
     return (
         <>
         <Sidebar>
@@ -27,35 +28,38 @@ const Dashboard = () => {
                     </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
-                <div className="grid grid-cols-2 col-span-2 border-2 border-gray-300 rounded-lg shadow-md bg-white">
-                    <div>
-                        <div className="ml-12 mt-8">
-                        <p className="text-2xl font-bold">Total Tagihan Akan Dibayarkan</p>
-                        <div className="flex mt-8 mb-8">
-                            <p className="mt-6 ml-4 text-2xl font-bold">Rp</p>
-                            <p className="text-6xl font-bold text-tertiary ml-4">2,318,400</p>
-                        </div>
-                        </div>
+                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
+                    <div className="ml-12 mt-8">
+                    <p className="text-2xl font-bold">Jumlah Penjemputan</p>
+                    <div className="flex mt-8 mb-8">
+                        <p className="text-6xl font-bold text-tertiary">32</p>
+                        <p className="mt-6 ml-4 text-2xl font-bold"> Transaksi</p>
                     </div>
-                    <div>
-                    <a href=""><button className="text-white text-2xl bg-primary rounded-full px-6 py-2 mx-28 mt-20 w-60 font-bold">Lihat Detail</button></a>
-                    </div>
-
+                </div>
                 </div>
                 <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
                     <div className="ml-12 mt-8">
-                    <p className="text-2xl font-bold">Jumlah Transaksi Penukaran</p>
+                    <p className="text-2xl font-bold">Jumlah Minyak Dijemput</p>
                     <div className="flex mt-8 mb-8">
-                        <p className="text-6xl font-bold text-tertiary">37</p>
+                        <p className="text-6xl font-bold text-tertiary">160</p>
+                        <p className="mt-6 ml-4 text-2xl font-bold">Liter</p>
+                    </div>
+                </div>
+                </div>
+                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
+                    <div className="ml-12 mt-8">
+                    <p className="text-2xl font-bold">Jumlah Pengantaran</p>
+                    <div className="flex mt-8 mb-8">
+                        <p className="text-6xl font-bold text-tertiary">30</p>
                         <p className="mt-6 ml-4 text-2xl font-bold">Transaksi</p>
                     </div>
                 </div>
                 </div>
                 <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
                     <div className="ml-12 mt-8">
-                    <p className="text-2xl font-bold">Jumlah Minyak Terkumpul</p>
+                    <p className="text-2xl font-bold">Jumlah Minyak Diantar</p>
                     <div className="flex mt-8 mb-8">
-                        <p className="text-6xl font-bold text-tertiary">360</p>
+                        <p className="text-6xl font-bold text-tertiary">150</p>
                         <p className="mt-6 ml-4 text-2xl font-bold">Liter</p>
                     </div>
                 </div>
@@ -67,4 +71,4 @@ const Dashboard = () => {
     );
 }
 
-export default Dashboard;
+export default DashboardDriver;
