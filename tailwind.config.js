@@ -8,6 +8,9 @@ module.exports = {
         primary : "#003459",
         secondary : "#EEBF32",
         tertiary : "#58AFD7",
+        secondarylight : "#FFE188",
+        secondarylight2: "#FDCF46",
+        secondarydark: "#EDB50A",
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

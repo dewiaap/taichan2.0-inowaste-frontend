@@ -15,7 +15,7 @@ const Voucher = () => {
                 </div>
 
                 <div className="col-start-2 col-span-2">
-                    <div><p className="font-bold">Voucher langganan SPOTIFY 1 Bulan </p></div>
+                    <div><p className="font-bold text-lg">Voucher langganan SPOTIFY 1 Bulan </p></div>
                     <div className="grid grid-cols-3 divide-x text-xs border-b mt-4">
                             <div><p className="text-gray-500 mb-2">Poin</p><p className="font-bold">5,000 Poin</p></div>
                             <div className="pl-6 col-start-2 col-span-2"><p className="text-gray-500 pb-2">Masa berlaku</p><p className="font-bold pb-4">1 minggu setelah voucher di redeem</p></div>
@@ -31,7 +31,7 @@ const Voucher = () => {
             </div>
 
             <div className="text-right mt-4">
-                <button className="py-2 px-6 text-white bg-secondary hover:bg-tertiary font-bold rounded-full w-28">Tukar</button>
+                <button className="py-2 px-6 text-white bg-secondary hover:bg-secondarydark font-bold rounded-full w-28">Tukar</button>
             </div>
         </div>
         </>

@@ -10,7 +10,7 @@ const Sidebar = ({children}) => {
             <div className="text-white text-lg mt-12 ml-8 space-y-8">
                 <div className="hover:bg-secondary hover:rounded-l-full py-2 px-6 focus-within:bg-secondary focus-within:rounded-l-full focus-within:font-semibold"><a href="#/profilmitra/:id_mitra" className="flex place-items-center gap-x-3"><img src="dashboard.png" className="object-cover h-4"></img><p>Dashboard</p></a></div>
                 <div className="hover:bg-secondary hover:rounded-l-full py-2 px-6 focus-within:bg-secondary focus-within:rounded-l-full focus-within:font-semibold"><a href="#/permintaan" className="flex place-items-center gap-x-3"><img src="permintaan.png" className="object-cover h-4"></img><p>Permintaan</p></a></div>
-                <div className="hover:bg-secondary hover:rounded-l-full py-2 px-6 focus-within:bg-secondary focus-within:rounded-l-full focus-within:font-semibold"><a href="#" className="flex place-items-center gap-x-3"><img src="galeri.png" className="object-cover h-4"></img><p>Galeri</p></a></div>
+                <div className="hover:bg-secondary hover:rounded-l-full py-2 px-6 focus-within:bg-secondary focus-within:rounded-l-full focus-within:font-semibold"><a href="#/galeri" className="flex place-items-center gap-x-3"><img src="galeri.png" className="object-cover h-4"></img><p>Galeri</p></a></div>
             </div>
             {/* mt-36 */}
             <div className="text-white   ml-8 mt-36">

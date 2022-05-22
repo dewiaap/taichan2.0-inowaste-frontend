@@ -102,7 +102,7 @@ const Permintaan = () => {
                 <img src="nextRight.png" className="w-2 h-3"></img>
                 </div>
             </button>
-        </div>
+            </div>
         </div>
         </Sidebar>
         </>
