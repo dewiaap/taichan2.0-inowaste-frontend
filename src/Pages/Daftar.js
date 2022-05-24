@@ -1,9 +1,9 @@
 const Daftar = () => {
     return (
         <>
-        <div className="flex w-full h-full bg-gradient-to-r from-zinc-400 via-primary to-primary py-10 ">
-           <div className="items-center justify-center bg-white border border-light-grey w-3/6 h-fit rounded mx-80 py-10 px-6 mb-6 font-poppins mt-10">
-                <h1 className=" font-black font-bold mb-2 text-3xl text-center">Daftar</h1>
+        <div className="flex w-full h-full bg-primary md:bg-gradient-to-r md:from-zinc-400 md:via-primary md:to-primary py-10 ">
+           <div className="items-center justify-center bg-white border border-light-grey w-5/6 md:w-3/6 h-fit rounded mx-auto py-10 px-6 mb-6 font-poppins mt-10">
+                <h1 className="font-bold mb-2 text-3xl text-center">Daftar</h1>
                 <p className="mt-1 text-center">Sudah punya akun? <a href="#/masuk" className="text-secondary font-bold underline underline-offset-1">Log In</a></p>
 
                 <select className="form-select block border rounded-lg border-black w-11/12 mt-10 mx-auto p-3 mb-4 text-xs">

@@ -15,7 +15,7 @@ const Navbar = () => {
                             <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/berita">Berita</a></span>
                         </div>
                         <div className="hidden md:flex">
-                            <button className="bg-secondary hover:bg-tertiary px-8 py-2 rounded-full font-bold text-xl"><a href="#/masuk">Masuk</a></button>
+                        <a href="#/masuk"><button className="bg-secondary hover:bg-tertiary px-8 py-2 rounded-full font-bold text-xl">Masuk</button></a>
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             <button
