@@ -27,7 +27,7 @@ import Sidebar from './Components/Sidebar';
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mitra" element={<Mitra />} />
@@ -49,7 +49,7 @@ function App() {
         <Route path="/penjemputan" element={<Penjemputan />} />
         <Route path="/dashboardDriver" element={<DashboardDriver />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
