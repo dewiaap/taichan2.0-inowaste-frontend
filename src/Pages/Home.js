@@ -1,6 +1,30 @@
+import { useState, useEffect } from "react";
 const Home = () => {
+    const [mitra, setMitra] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if (!isLoading) return;
+        fetch('https://taichan2-0-inowaste-backend-dewiaap.vercel.app/user/id_level/1', {
+            method: "GET"
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((response) => {
+                setTimeout(() => {
+                    setMitra(response.data.slice(-4));
+                    setIsLoading(false);
+                }, 2000)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }, [isLoading])
+
     return (
         <>
+            {console.log(mitra)}
             <div className="grid grid-cols-1 md:grid-cols-2 h-fit bg-primary pt-12 md:pt-12">
                 <div className="flex flex-col self-center font-poppins pl-12 pr-12 md:pr-0 order-last md:order-first">
                     <h1 className="font-bold text-5xl text-white">Be Hero to Zero Waste</h1>
@@ -48,60 +72,89 @@ const Home = () => {
                     <img src="line_home.png"></img>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 md:gap-8 mx-auto">
-                    <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0">
-                        <div className="box-content w-16 h-4 py-1 rounded-lg bg-secondary text-xs text-center font-bold text-primary font-poppins justify-self-end">
-                            <p>309 poin</p>
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="logoGEU.png" alt="pict" className="object-contain h-28 w-44"></img>
-                        </div>
-                        <div>
-                            <p className="font-halant text-sm font-bold mt-2">PT Green Energi Utama (GEU)</p>
-                            <p className="pt-4 font-poppins text-xs text-gray-500 pb-2 text-right">| Malang</p>
-                        </div>
-                    </a>
+                    {isLoading
+                        ?
+                        (
+                            <>
+                                <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0 animate-pulse">
+                                    <div className="box-content w-16 h-4 py-1 rounded-lg bg-gray-400 text-xs text-center font-bold text-primary font-poppins justify-self-end">
+                                        <p></p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <div className="object-contain h-28 w-28 bg-gray-400 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-poppins text-xs bg-gray-400 mt-6 w-28 h-3 float-right rounded-full"></p>
+                                    </div>
+                                </a>
+                                <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0 animate-pulse">
+                                    <div className="box-content w-16 h-4 py-1 rounded-lg bg-gray-400 text-xs text-center font-bold text-primary font-poppins justify-self-end">
+                                        <p></p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <div className="object-contain h-28 w-28 bg-gray-400 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-poppins text-xs bg-gray-400 mt-6 w-28 h-3 float-right rounded-full"></p>
+                                    </div>
+                                </a>
+                                <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0 animate-pulse">
+                                    <div className="box-content w-16 h-4 py-1 rounded-lg bg-gray-400 text-xs text-center font-bold text-primary font-poppins justify-self-end">
+                                        <p></p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <div className="object-contain h-28 w-28 bg-gray-400 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-poppins text-xs bg-gray-400 mt-6 w-28 h-3 float-right rounded-full"></p>
+                                    </div>
+                                </a>
+                                <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0 animate-pulse">
+                                    <div className="box-content w-16 h-4 py-1 rounded-lg bg-gray-400 text-xs text-center font-bold text-primary font-poppins justify-self-end">
+                                        <p></p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <div className="object-contain h-28 w-28 bg-gray-400 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-halant text-sm font-bold mt-2 w-full h-3 bg-gray-400 rounded-full"></p>
+                                        <p className="font-poppins text-xs bg-gray-400 mt-6 w-28 h-3 float-right rounded-full"></p>
+                                    </div>
+                                </a>
+                            </>
+                        )
+                        :
+                        (
+                            <>
+                                {mitra.map((item, index) => {
+                                    return (
+                                        <a key={index} href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0">
+                                            <div className="box-content w-16 h-4 py-1 rounded-lg bg-secondary text-xs text-center font-bold text-primary font-poppins justify-self-end">
+                                                <p>{item.poin} poin</p>
+                                            </div>
+                                            <div className="flex justify-center">
+                                                <img src={item.gambar_profil} alt="pict" className="object-contain h-28 w-44"></img>
+                                            </div>
+                                            <div>
+                                                <p className="font-halant text-sm font-bold mt-2">{item.nama_lengkap}</p>
+                                                <p className="pt-4 font-poppins text-xs text-gray-500 pb-2 text-right">| {item.alamat.split(",")[3]}</p>
+                                            </div>
+                                        </a>
+                                    )
+                                })}
+                            </>
+                        )}
 
-                    <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0">
-                        <div className="box-content w-16 h-4 py-1 rounded-lg bg-secondary text-xs text-center font-bold text-primary font-poppins justify-self-end">
-                            <p>309 poin</p>
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="logoGEU.png" alt="pict" className="object-contain h-28 w-44"></img>
-                        </div>
-                        <div>
-                            <p className="font-halant text-sm font-bold mt-2">PT Green Energi Utama (GEU)</p>
-                            <p className="pt-4 font-poppins text-xs text-gray-500 pb-2 text-right">| Malang</p>
-                        </div>
-                    </a>
-
-                    <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0">
-                        <div className="box-content w-16 h-4 py-1 rounded-lg bg-secondary text-xs text-center font-bold text-primary font-poppins justify-self-end">
-                            <p>309 poin</p>
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="logoGEU.png" alt="pict" className="object-contain h-28 w-44"></img>
-                        </div>
-                        <div>
-                            <p className="font-halant text-sm font-bold mt-2">PT Green Energi Utama (GEU)</p>
-                            <p className="pt-4 font-poppins text-xs text-gray-500 pb-2 text-right">| Malang</p>
-                        </div>
-                    </a>
-
-                    <a href="" className="container box-border border w-48 h-64 p-2 shadow-lg rounded-md mb-6 md:mb-0">
-                        <div className="box-content w-16 h-4 py-1 rounded-lg bg-secondary text-xs text-center font-bold text-primary font-poppins justify-self-end">
-                            <p>309 poin</p>
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="logoGEU.png" alt="pict" className="object-contain h-28 w-44"></img>
-                        </div>
-                        <div>
-                            <p className="font-halant text-sm font-bold mt-2">PT Green Energi Utama (GEU)</p>
-                            <p className="pt-4 font-poppins text-xs text-gray-500 pb-2 text-right">| Malang</p>
-                        </div>
-                    </a>
                 </div>
                 <div className="flex justify-center">
-                    <button className="rounded-full w-full md:w-3/6 text-center p-3 bg-secondary text-white hover:bg-tertiary text-xl font-bold focus:outline-none my-16"><a href="#/mitra">Lihat Semua</a></button>
+                    <a href="#/mitra" className="rounded-full w-full md:w-3/6 text-center p-3 bg-secondary text-white hover:bg-tertiary focus:outline-none my-16"><button className="text-xl font-bold">Lihat Semua</button></a>
                 </div>
             </div>
         </>
