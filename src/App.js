@@ -29,21 +29,21 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        {/* udah */}
+        {/* udah jos */}
         <Route path="/" element={<Home />} />
-        {/* udah */}
+        {/* udah jos */}
         <Route path="/mitra" element={<Mitra />} />
-        {/* udah */}
+        {/* udah tinggal post data*/}
         <Route path="/mitra/:id_mitra" element={<DetailMitra />} />
-        {/* udah */}
+        {/* udah jos */}
         <Route path="/berita" element={<Berita />} />
-        {/* udah */}
+        {/* udah jos */}
         <Route path="/berita/:id_berita" element={<DetailBerita />} />
-        {/* udah */}
-        <Route path="/profil/:id_user" element={<Profil />} />
-        {/* udah */}
+        {/* udah tinggal update foto*/}
+        <Route path="/profil" element={<Profil />} />
+        {/* udah jos */}
         <Route path="/masuk" element={<Masuk />} />
-        {/* udah */}
+        {/* udah jos */}
         <Route path="/daftar" element={<Daftar />} />
         {/* udah */}
         <Route path="/riwayatPoin" element={<RiwayatPoin />} />

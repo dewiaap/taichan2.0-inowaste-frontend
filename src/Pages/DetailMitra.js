@@ -4,7 +4,6 @@ const DetailMitra = () => {
     const { id_mitra } = useParams();
     const [mitra, setMitra] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         if (!isLoading) return;
         fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/user/id_user/${id_mitra}`)
