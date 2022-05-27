@@ -28,7 +28,7 @@ const Galeri = () => {{
                     <div className="absolute my-4 ml-56">
                         <button id="dropdownDefault" data-dropdown-toggle="dropdown" type="button">
                         <div className="relative bg-gray-300 z-10 w-8 h-8 rounded-full">
-                            <img src="more.png" className="absolute h-4 mt-2 ml-3.5"></img>
+                            <img src="assets/more.png" className="absolute h-4 mt-2 ml-3.5"></img>
                         </div>
                         </button>
                         
@@ -40,12 +40,12 @@ const Galeri = () => {{
                         </div>
                     </div>
 
-                    <img src="img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
+                    <img src="assets/img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
                     <p className="font-bold text-sm mx-4 mt-56 py-4 pr-12">Forum Silahturahmi IKM Seluruh Malang</p>
                 </div>
 
                 <div className="box-border bg-white rounded-xl shadow-lg relative">
-                    <img src="img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
+                    <img src="assets/img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
                     <p className="font-bold text-sm mx-4 mt-56 py-4 pr-12">Forum Silahturahmi IKM Seluruh Malang</p>
                 </div>
 
@@ -53,7 +53,7 @@ const Galeri = () => {{
                     <div className="absolute">
                         <div className="bg-gray-300 w-4 h-4 rounded-full"></div>
                     </div>
-                    <img src="img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
+                    <img src="assets/img_detailMitra_square.png" className="absolute object-cover rounded-t-xl h-56 w-full"></img>
                     <p className="font-bold text-sm mx-4 mt-56 py-4 pr-12">Forum Silahturahmi IKM Seluruh Malang</p>
                 </div>
 
@@ -62,7 +62,7 @@ const Galeri = () => {{
             <div className="flex font-poppins justify-center mt-14">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextLeft.png" className="w-2 h-3"></img>
+                <img src="assets/nextLeft.png" className="w-2 h-3"></img>
                 </div>
             </button>
             <button className="hover:bg-secondary hover:text-white active:bg-secondary active:text-white border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
@@ -79,7 +79,7 @@ const Galeri = () => {{
             </button>
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextRight.png" className="w-2 h-3"></img>
+                <img src="assets/nextRight.png" className="w-2 h-3"></img>
                 </div>
             </button>
             </div>

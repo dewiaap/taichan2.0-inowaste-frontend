@@ -12,7 +12,7 @@ const ProfilMitra = () => {
 
                 <div className="grid grid-cols-5 bg-white shadow-md max-h-full p-12 font-poppins rounded-xl">
                     <div>
-                        <img src="logoGEU.png" alt="photo" className='object-cover h-28'></img>
+                        <img src="assets/logoGEU.png" alt="photo" className='object-cover h-28'></img>
                     </div>
 
                     <div className="col-start-2 col-span-4 text-xs space-y-4 mr-8 ">

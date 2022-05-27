@@ -16,7 +16,7 @@ const Navbar = () => {
                         <nav className="bg-tertiary md:bg-primary">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="flex justify-between items-center h-20 w-full font-poppins text-white">
-                                    <div className=""><a href="#/"><img src="inowaste2.png" className="object-cover h-20"></img></a></div>
+                                    <div className=""><a href="#/"><img src="assets/inowaste2.png" className="object-cover h-20"></img></a></div>
                                     <div className="hidden md:flex">
                                         <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/#beranda">Beranda</a></span>
                                         <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/mitra">Daftar Mitra</a></span>

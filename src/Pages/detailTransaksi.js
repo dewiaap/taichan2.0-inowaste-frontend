@@ -6,7 +6,7 @@ const DetailTransaksi = () => {
             <div className="box-border bg-white border-b h-16 flex justify-between px-8 mb-6 place-items-center">
                 <div className="text-md font-bold pt-2">Detail Transaksi</div>
 
-                <div className=""><button type="button"><img src="close.png" alt="tutup" className="object-cover h-5"></img></button></div>
+                <div className=""><button type="button"><img src="assets/close.png" alt="tutup" className="object-cover h-5"></img></button></div>
             </div>
 
             <div className="px-8 pb-6 flex">

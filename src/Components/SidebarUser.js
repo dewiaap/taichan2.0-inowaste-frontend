@@ -1,5 +1,5 @@
 import swal from "sweetalert";
-import { invalidateSession } from "../Helpers/Session";
+import { invalidateSession, dataLogin } from "../Helpers/Session";
 const SidebarUser = ({ active }) => {
     const logout = () => {
         swal({
@@ -17,7 +17,7 @@ const SidebarUser = ({ active }) => {
     };
     return (
         <div className="box-border bg-white w-full h-auto mb-8 md:mb-0 md:w-52 md:h-60 drop-shadow-md rounded-xl">
-            <div className="box-border bg-white border-b h-10"><p className="font-extrabold ml-6 mt-6 text-md">Hi, Arum!</p></div>
+            <div className="box-border bg-white border-b h-10"><p className="font-extrabold ml-6 mt-6 text-md">Hi, {dataLogin.username}!</p></div>
             <ul className="mx-6 my-4 justify-between text-sm">
                 <li className={`${active === "profil" ? 'font-semibold' : ''} mb-3`}><a href="#/profil">Akun Saya</a></li>
                 <li className={`${active === "poin" ? 'font-semibold' : ''} mb-3`}><a href="#/riwayatpoin">Poin Saya</a></li>

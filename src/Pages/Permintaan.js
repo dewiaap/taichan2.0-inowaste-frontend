@@ -82,7 +82,7 @@ const Permintaan = () => {
             <div className="flex font-poppins justify-center mt-14">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextLeft.png" className="w-2 h-3"></img>
+                <img src="assets/nextLeft.png" className="w-2 h-3"></img>
                 </div>
             </button>
             <button className="hover:bg-secondary hover:text-white active:bg-secondary active:text-white border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
@@ -99,7 +99,7 @@ const Permintaan = () => {
             </button>
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextRight.png" className="w-2 h-3"></img>
+                <img src="assets/nextRight.png" className="w-2 h-3"></img>
                 </div>
             </button>
             </div>
