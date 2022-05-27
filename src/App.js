@@ -27,7 +27,7 @@ import Sidebar from './Components/Sidebar';
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         {/* udah jos */}
         <Route path="/" element={<Home />} />
@@ -54,15 +54,15 @@ function App() {
         {/* udah */}
         <Route path="/riwayat" element={<Riwayat />} />
          {/* udah */}
-        <Route path="/detailTransaksi" element={<DetailTransaksi />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/detailTransaksi" element={<DetailTransaksi />} /> {/* udah */}
+        <Route path="/dashboard" element={<Dashboard />} /> {/**udah better */}
         <Route path="/profilmitra/:id_mitra" element={<ProfilMitra />} />
         <Route path="/permintaan" element={<Permintaan />} />
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/penjemputan" element={<Penjemputan />} />
         <Route path="/dashboardDriver" element={<DashboardDriver />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

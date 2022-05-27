@@ -31,7 +31,7 @@ const Home = () => {
                     <p className="font-medium text-xl md:text-2xl text-white mt-8 text-justify md:text-left"><strong>inowaste</strong> merupakan platform berbasis website yang dapat
                         mempertemukan pengepul dengan penghasil minyak jelantah dengan mudah.</p>
                     <div className="flex justify-center md:justify-start">
-                        <button className="rounded-full px-12 py-2 w-full md:w-56 mt-8 text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary text-lg focus:outline-none my-1">Tukar Minyak
+                        <button className="rounded-full px-12 py-2 w-full md:w-56 mt-8 text-center p-3 bg-secondary text-white font-bold hover:bg-secondarydark text-lg focus:outline-none my-1">Tukar Minyak
                         </button>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ const Home = () => {
 
                 </div>
                 <div className="flex justify-center">
-                    <a href="#/mitra" className="rounded-full w-full md:w-3/6 text-center p-3 bg-secondary text-white hover:bg-tertiary focus:outline-none my-16"><button className="text-xl font-bold">Lihat Semua</button></a>
+                    <a href="#/mitra" className="rounded-full w-full md:w-3/6 text-center p-3 bg-secondary text-white hover:bg-secondarydark focus:outline-none my-16"><button className="text-xl font-bold">Lihat Semua</button></a>
                 </div>
             </div>
         </>

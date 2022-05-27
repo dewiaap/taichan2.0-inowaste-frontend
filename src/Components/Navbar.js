@@ -16,11 +16,11 @@ const Navbar = () => {
                         <nav className="bg-tertiary md:bg-primary">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="flex justify-between items-center h-20 w-full font-poppins text-white">
-                                    <div className=""><a href="#/"><img src="assets/inowaste2.png" className="object-cover h-20"></img></a></div>
-                                    <div className="hidden md:flex">
-                                        <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/#beranda">Beranda</a></span>
-                                        <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/mitra">Daftar Mitra</a></span>
-                                        <span className="ml-6 font-bold text-xl hover:text-tertiary"><a href="#/berita">Berita</a></span>
+                                    <div className=""><a href="#/"><img src="inowaste2.png" className="object-cover h-20"></img></a></div>
+                                    <div className="hidden lg:flex">
+                                        <span className="ml-6 font-bold text-xl hover:text-secondary"><a href="#/#beranda">Beranda</a></span>
+                                        <span className="ml-6 font-bold text-xl hover:text-secondary"><a href="#/mitra">Daftar Mitra</a></span>
+                                        <span className="ml-6 font-bold text-xl hover:text-secondary"><a href="#/berita">Berita</a></span>
                                     </div>
                                     {isLogin ?
                                         (
@@ -33,7 +33,7 @@ const Navbar = () => {
                                         :
                                         (
                                             <div className="hidden md:flex">
-                                                <a href="#/masuk"><button className="bg-secondary hover:bg-tertiary px-8 py-2 rounded-full font-bold text-xl">Masuk</button></a>
+                                                <a href="#/masuk"><button className="bg-secondary hover:bg-secondarydark px-8 py-2 rounded-full font-bold text-xl">Masuk</button></a>
                                             </div>
                                         )}
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                                         <button
                                             onClick={() => setIsOpen(!isOpen)}
                                             type="button"
-                                            className="bg-tertiary inline-flex items-center justify-center p-2 text-white focus:outline-none"
+                                            className="bg-primary inline-flex items-center justify-center p-2 text-white focus:outline-none"
                                             aria-controls="mobile-menu"
                                             aria-expanded="false"
                                         >
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 leaveTo="opacity-0 scale-95"
                             >
                                 {() => (
-                                    <div className="md:hidden" id="mobile-menu">
+                                    <div className="md:hidden bg-primarydark" id="mobile-menu">
                                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                                             <a
                                                 href="#/#beranda"
