@@ -5,16 +5,16 @@ const Permintaan = () => {
         <>
         <Sidebar>
         <div className="font-poppins mx-12 mt-6 pb-12">
-            <div className="flex justify-between place-items-center mb-8">
+            <div className="flex flex-col space-y-2 justify-between mb-8">
                     <p className="font-bold text-lg">Permintaan</p>
-
-                    <div className="flex gap-x-6 mt-6">
-                    <p className="font-bold mt-3">Pilih Status</p>
-                    <select className="rounded-3xl shadow-md border-white">
+                    <div className="flex gap-x-6 mt-6 self-end">
+                    <p className="font-bold mt-3 text-sm md:text-base">Pilih Status</p>
+                    <select className="rounded-3xl text-sm md:text-base shadow-md border-white">
                         <option>Belum Diverifikasi</option>
                         <option>Selesai</option>
                     </select>
                     </div>
+                    
             </div>
 
             <div className="grid grid-cols-3 gap-x-8">
@@ -33,7 +33,7 @@ const Permintaan = () => {
                     </div> 
                     </div>
                    
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
 
                 <div className="box-border bg-white p-6 rounded-lg shadow-lg">
@@ -54,7 +54,7 @@ const Permintaan = () => {
                    
                     
 
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
 
                 <div className="box-border bg-white p-6 rounded-lg shadow-lg">
@@ -75,7 +75,7 @@ const Permintaan = () => {
                    
                     
 
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
             </div>
 

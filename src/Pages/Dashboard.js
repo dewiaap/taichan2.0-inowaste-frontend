@@ -1,15 +1,37 @@
+import { useState, useEffect } from "react";
 import Sidebar from "../Components/Sidebar";
 const Dashboard = () => {
+    const [mitra, setMitra] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if (!isLoading) return;
+        fetch('https://taichan2-0-inowaste-backend-dewiaap.vercel.app/user/id_level/1', {
+            method: "GET"
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((response) => {
+                setTimeout(() => {
+                    setMitra(response.data.slice(-4));
+                    setIsLoading(false);
+                }, 2000)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }, [isLoading])
     return (
         <>
         <Sidebar>
-        <div className="font-poppins mx-12 mt-6 pb-12">
-            <div className="flex justify-between place-items-center mb-8">
-                    <p className="font-bold text-lg">Dashboard</p>
+        <div className="font-poppins mx-12 mt-4 md:mt-6 pb-12">
+            <div className="flex flex-col space-y-2 justify-between mb-8">
+                    <div className="font-bold text-lg"><p>Dashboard</p></div>
 
-                    <div className="flex gap-x-6 mt-6">
-                    <p className="font-bold mt-3">Pilih Periode</p>
-                    <select className="rounded-3xl shadow-md border-white">
+                    <div className="flex gap-x-6 mt-6  md:flex md:w-fit self-end">
+                    <p className="font-bold mt-8  md:mt-3  text-sm md:text-base">Pilih Periode</p>
+                    <select className="rounded-3xl shadow-md border-white text-sm md:text-base mt-6 md:mt-0">
                         <option className="selected">--Pilih Bulan--</option>
                         <option>Januari</option>
                         <option>Februari</option>
@@ -28,36 +50,43 @@ const Dashboard = () => {
             </div>
             <div className="grid grid-cols-2 gap-6">
                 <div className="grid grid-cols-2 col-span-2 border-2 border-gray-300 rounded-lg shadow-md bg-white">
-                    <div>
-                        <div className="ml-12 mt-8">
-                        <p className="text-2xl font-bold">Total Tagihan Akan Dibayarkan</p>
-                        <div className="flex mt-8 mb-8">
-                            <p className="mt-6 ml-4 text-2xl font-bold">Rp</p>
-                            <p className="text-6xl font-bold text-tertiary ml-4">2,318,400</p>
-                        </div>
+                    <div className="col-span-2 lg:col-span-1">
+                        <div className="ml-8 md:ml-12 mt-8">
+                            <p className="text-lg md:text-2xl font-bold">Total Tagihan Akan Dibayarkan</p>
+                            <div className="flex mt-4 md:mt-8 mb-8">
+                                <p className="mt-2 md:mt-6 md:ml-4 text-lg md:text-2xl font-bold">Rp</p>
+                                <p className="text-4xl md:text-6xl font-bold text-tertiary ml-4">2,318,400</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                    <a href=""><button className="text-white text-2xl bg-primary rounded-full px-6 py-2 mx-28 mt-20 w-60 font-bold">Lihat Detail</button></a>
+                    
+                    <div className="md:hidden ml-8 mb-8 ">
+                        <a href=""><button className="text-white text-base  bg-primary rounded-full px-6 py-2 font-bold">Lihat Detail</button></a>
+                    </div>
+                    
+                    <div className="hidden md:block">
+                    <a href=""><button className="text-white text-lg md:text-xl bg-primary rounded-full px-6 py-2 md:ml-12 md:mb-8 md:w-48  lg:mx-28 lg:mt-20 lg:w-60 font-bold">Lihat Detail</button></a>
                     </div>
 
                 </div>
-                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
-                    <div className="ml-12 mt-8">
-                    <p className="text-2xl font-bold">Jumlah Transaksi Penukaran</p>
-                    <div className="flex mt-8 mb-8">
-                        <p className="text-6xl font-bold text-tertiary">37</p>
-                        <p className="mt-6 ml-4 text-2xl font-bold">Transaksi</p>
+                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white px-8">
+                    <div className="mt-8">
+                        <p className="text-lg md:text-2xl font-bold text-center md:flex">Jumlah Transaksi Penukaran</p>
+                        <div className="flex mt-4 mb-4 md:mt-8 md:mb-8  place-content-center md:flex md:place-content-start md:gap-x-2">
+                            <p className="text-4xl md:text-6xl font-bold text-tertiary">37</p>
+                            <p className="hidden md:flex md:mt-6  text-lg md:text-2xl font-bold">Transaksi</p>
+                        </div>
+                        <div className="md:hidden text-lg font-bold text-center mb-8"><p>Transaksi</p></div>
                     </div>
                 </div>
-                </div>
-                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white">
-                    <div className="ml-12 mt-8">
-                    <p className="text-2xl font-bold">Jumlah Minyak Terkumpul</p>
-                    <div className="flex mt-8 mb-8">
-                        <p className="text-6xl font-bold text-tertiary">360</p>
-                        <p className="mt-6 ml-4 text-2xl font-bold">Liter</p>
+                <div className="border-2 border-gray-300 rounded-lg shadow-md bg-white px-8">
+                    <div className="mt-8">
+                    <p className="text-lg md:text-2xl font-bold text-center md:flex">Jumlah Minyak Terkumpul</p>
+                    <div className="flex mt-4 mb-4 md:mt-8 md:mb-8 place-content-center md:flex md:place-content-start md:gap-x-2">
+                        <p className="text-4xl md:text-6xl font-bold text-tertiary">360</p>
+                        <p className="hidden md:flex  md:mt-6 md:text-2xl font-bold">Liter</p>
                     </div>
+                    <div className="md:hidden text-lg font-bold text-center mb-8"><p className="">Liter</p></div>
                 </div>
                 </div>
             </div>
