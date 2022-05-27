@@ -11,7 +11,6 @@ const RiwayatPoin = () => {
             .then(response => response.json())
             .then(response => {
                 setPenukaran(response.data);
-                console.log(response.data)
             })
             .catch((err) => {
                 console.log(err);
@@ -20,8 +19,8 @@ const RiwayatPoin = () => {
         fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/transaksi/id_user/${dataLogin.id_user}`)
             .then(response => response.json())
             .then(response => {
-                setTransaksi(response.data);
-                console.log(response.data)
+                let data = response.data.filter(item => item.detail_transaksi[item.detail_transaksi.length-1].status === "minyak diterima");
+                setTransaksi(data);
             })
             .catch((err) => {
                 console.log(err);

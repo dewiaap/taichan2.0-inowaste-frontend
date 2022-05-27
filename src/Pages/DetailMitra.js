@@ -1,9 +1,20 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { CheckNotLogin, dataLogin, isLogin } from "../Helpers/Session";
+import swal from "sweetalert";
+import moment from "moment";
+
 const DetailMitra = () => {
+    const navigate = useNavigate();
     const { id_mitra } = useParams();
     const [mitra, setMitra] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [noTelp, setNoTelp] = useState(dataLogin.no_telp);
+    const [alamat, setAlamat] = useState(dataLogin.alamat);
+    const [tanggal, setTanggal] = useState("");
+    const [waktu, setWaktu] = useState("");
+    const [liter, setLiter] = useState(0);
+    const [onProgress, setOnProgress] = useState(false);
     useEffect(() => {
         if (!isLoading) return;
         fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/user/id_user/${id_mitra}`)
@@ -14,10 +25,50 @@ const DetailMitra = () => {
                     setIsLoading(false);
                 }, 2000);
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err);
             })
     }, [isLoading])
+
+    useEffect(() => {
+        if (!onProgress) return;
+
+        if (alamat.split(",").length !== 6) {
+            swal("Format Alamat Salah", "Isikan Alamat dengan format Jalan, Kelurahan, Kecamatan, Kota, Provinsi, Kode Pos", "error");
+            setOnProgress(false);
+            return;
+        }
+
+        fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/transaksi/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id_user: dataLogin.id_user,
+                id_mitra: id_mitra,
+                no_telp: noTelp,
+                alamat: alamat,
+                liter: liter,
+                waktu_permintaan: moment(tanggal + " " + waktu).format('YYYY-MM-DD HH:mm:ss'),
+            }),
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.status === "success") {
+                    swal("Berhasil", "Transaksi berhasil", "success");
+                    setOnProgress(false);
+                    navigate("/riwayat");
+                } else {
+                    swal("Gagal", "Transaksi gagal", "error");
+                    setOnProgress(false);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                setOnProgress(false);
+            })
+    }, [onProgress])
     return (
         <>
             {isLoading ? (
@@ -72,7 +123,9 @@ const DetailMitra = () => {
                     <div className="grid grid-cols-1 gap-4 mt-8 font-poppins mx-auto md:ml-12 w-11/12 md:w-8/12">
                         <div className="flex flex-col mt-12">
                             <h3 className="text-3xl md:text-5xl font-bold text-primary">Mau Tukar Minyak?</h3>
-                            <form>
+                            <form onClick={(e) => {
+                                if (!isLogin) swal("Harap Login", "Silahkan login terlebih dahulu", "warning");
+                            }}>
                                 <div className="form-control mt-8">
                                     <h6 className="text-md md:text-xl font-bold mt-20">Mitra Tujuan</h6>
                                     <div className="w-11/12 bg-gray-400 rounded-lg p-4 h-16 mt-2 animate-pulse">
@@ -139,7 +192,12 @@ const DetailMitra = () => {
                         <div className="grid grid-cols-1 gap-4 mt-8 font-poppins mx-auto md:ml-12 w-11/12 md:w-8/12">
                             <div className="flex flex-col mt-12">
                                 <h3 className="text-3xl md:text-5xl font-bold text-primary">Mau Tukar Minyak?</h3>
-                                <form>
+                                <form onSubmit={(e) => {
+                                    e.preventDefault();
+                                    setOnProgress(true);
+                                }} onClick={(e) => {
+                                    if (!isLogin) swal("Harap Login", "Silahkan login terlebih dahulu", "warning");
+                                }}>
                                     <div className="form-control mt-8">
                                         <h6 className="text-md md:text-xl font-bold mt-20">Mitra Tujuan</h6>
                                         <div className="w-11/12 bg-gray-100 rounded-lg p-4 text-gray-500 mt-2">
@@ -149,25 +207,27 @@ const DetailMitra = () => {
                                     </div>
                                     <div className="form-control mt-8">
                                         <h6 className="text-md md:text-xl font-bold ">Nomor Handphone (WhatsApp)</h6>
-                                        <input type="text" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 font-poppins placeholder:text-center text-xs" name="no_telp" />
+                                        <input type="text" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 font-poppins placeholder:text-center text-xs" name="no_telp" defaultValue={dataLogin.no_telp} onChange={(e) => { setNoTelp(e.target.value) }} />
                                     </div>
                                     <div className="form-control mt-8">
                                         <h6 className="text-md md:text-xl font-bold ">Alamat Penjemputan</h6>
-                                        <textarea type="text" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 font-poppins placeholder:text-center text-xs" name="alamat"></textarea>
+                                        <textarea type="text" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 font-poppins placeholder:text-center text-xs" name="alamat" defaultValue={dataLogin.alamat} onChange={(e) => { setAlamat(e.target.value) }}></textarea>
                                     </div>
                                     <div className="form-control mt-8">
                                         <h6 className="text-md md:text-xl font-bold ">Tanggal Penjemputan</h6>
                                         <div className="flex">
-                                            <input type="date" className="block border border-gray-300 rounded-lg shadow-md w-6/12 p-3 mt-2 mr-2 placeholder:text-center text-xs" name="tanggal" />
-                                            <input type="time" className="block border border-gray-300 rounded-lg shadow-md w-5/12 p-3 mt-2 placeholder:text-center text-xs" name="waktu" />
+                                            <input type="date" className="block border border-gray-300 rounded-lg shadow-md w-6/12 p-3 mt-2 mr-2 placeholder:text-center text-xs" name="tanggal" onChange={(e) => { setTanggal(e.target.value) }} />
+                                            <input type="time" className="block border border-gray-300 rounded-lg shadow-md w-5/12 p-3 mt-2 placeholder:text-center text-xs" name="waktu" onChange={(e) => { setWaktu(e.target.value) }} />
                                         </div>
                                     </div>
                                     <div className="form-control mt-8">
                                         <h6 className="text-md md:text-xl font-bold ">Perkiraan Jumlah Minyak (Liter)</h6>
-                                        <input type="number" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 placeholder:text-center text-xs" name="liter" />
+                                        <input type="number" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 placeholder:text-center text-xs" min={5} name="liter" onChange={(e) => { setLiter(e.target.value) }} />
                                     </div>
                                     <div className="flex mx-auto md:justify-start">
-                                        <button className="rounded-full w-11/12 md:w-auto md:px-16 md:py-3 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary text-lg focus:outline-none mb-16">Kirim</button>
+                                        <button type="submit" className="rounded-full w-11/12 md:w-1/3 md:px-16 md:py-3 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary text-lg focus:outline-none mb-16">
+                                            {onProgress ? (<span className="animate-pulse">Memproses...</span>) : (<>Kirim</>)}
+                                        </button>
                                     </div>
                                 </form>
                             </div>
