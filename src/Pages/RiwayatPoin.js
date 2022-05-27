@@ -10,7 +10,7 @@ const RiwayatPoin = () => {
         fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/penukaran/id_user/${dataLogin.id_user}`)
             .then(response => response.json())
             .then(response => {
-                setPenukaran(response.data);
+                setPenukaran(response?.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -19,7 +19,7 @@ const RiwayatPoin = () => {
         fetch(`https://taichan2-0-inowaste-backend-dewiaap.vercel.app/transaksi/id_user/${dataLogin.id_user}`)
             .then(response => response.json())
             .then(response => {
-                let data = response.data.filter(item => item.detail_transaksi[item.detail_transaksi.length-1].status === "minyak diterima");
+                let data = response?.data?.filter(item => item.detail_transaksi[item.detail_transaksi.length-1].status === "minyak diterima");
                 setTransaksi(data);
             })
             .catch((err) => {
@@ -92,7 +92,7 @@ const RiwayatPoin = () => {
                             :
                             (
                                 <>
-                                    {penukaran.map((item, index) => {
+                                    {penukaran?.map((item, index) => {
                                         return (
                                             <div key={index} className="border-b border-gray-200">
                                                 <div className="px-8 pt-2 pb-3 flex justify-between mt-2 mr-6">
@@ -104,9 +104,9 @@ const RiwayatPoin = () => {
                                         );
                                     })}
 
-                                    {transaksi.map((item, index) => {
+                                    {transaksi?.map((item, index) => {
                                         return (
-                                            <div className="border-b border-gray-200">
+                                            <div key={index} className="border-b border-gray-200">
                                                 <div className="px-8 pt-2 pb-3 flex justify-between mt-2 mr-6">
                                                     <div><p className="text-sm font-bold mb-1">Penukaran Minyak</p>
                                                         <p className="text-xs text-gray-400">{item.mitra.nama_lengkap}</p></div>

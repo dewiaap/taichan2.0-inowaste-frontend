@@ -5,13 +5,13 @@ const Voucher = () => {
 
             <div className="text-right">
                 <button>
-                    <img src="close.png" alt="close" className="object-cover h-5"></img>
+                    <img src="assets/close.png" alt="close" className="object-cover h-5"></img>
                 </button>
             </div>
             
             <div className="grid grid-cols-3">
                 <div>
-                    <img src="foto_voucher.png" alt="voucher" className="object-cover h-28 w-46 rounded"></img>
+                    <img src="assets/foto_voucher.png" alt="voucher" className="object-cover h-28 w-46 rounded"></img>
                 </div>
 
                 <div className="col-start-2 col-span-2">

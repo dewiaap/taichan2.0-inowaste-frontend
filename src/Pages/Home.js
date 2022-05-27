@@ -36,21 +36,21 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mb-6 md:mb-0">
-                    <img src="home_img.png" className="w-9/12"></img>
+                    <img src="assets/home_img.png" className="w-9/12"></img>
                 </div>
             </div>
             <div className="">
-                <img src="vector_wave.png"></img>
+                <img src="assets/vector_wave.png"></img>
             </div>
             <div className="grid grid-cols-1">
                 <div className="font-bold font-poppins text-primary text-3xl md:text-5xl mt-16 mb-8 text-center px-12 md:px-0">
                     <h1>Langkah Penukaran Minyak</h1>
                 </div>
                 <div className="flex justify-center mb-28">
-                    <img src="line_home.png"></img>
+                    <img src="assets/line_home.png"></img>
                 </div>
                 <div className="flex w-5/6 justify-center mx-auto mb-32">
-                    <img src="langkah_img.png"></img>
+                    <img src="assets/langkah_img.png"></img>
                 </div>
             </div>
             <div className="grid grid-cols-2 font-poppins text-white">
@@ -69,7 +69,7 @@ const Home = () => {
                     <h1>Daftar Mitra</h1>
                 </div>
                 <div className="flex justify-center mb-6 md:mb-20">
-                    <img src="line_home.png"></img>
+                    <img src="assets/line_home.png"></img>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 md:gap-8 mx-auto">
                     {isLoading

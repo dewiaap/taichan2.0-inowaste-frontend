@@ -47,12 +47,12 @@ const Berita = () => {
                     <p className="font-medium text-xl md:text-2xl text-white mt-5">Temukan hal yang ingin kamu ketahui tentang minyak jelantah dan program menarik dari kami!</p>
                 </div>
                 <div className="flex self-center justify-center mb-8 md:mb-0">
-                    <img src="img_berita.png" className="w-fit"></img>
+                    <img src="assets/img_berita.png" className="w-fit"></img>
                 </div>
             </div>
             <div className="font-poppins flex md:flex-row mx-auto mt-14 mb-10 max-w-md md:max-w-4xl">
                 <div className="container relative block">
-                    <span className="absolute inset-y-0 right-4 flex items-center pl-2"><button type="submit" className="focus:outline-none"><img src="vectorSearch.png" alt="search" className="object-cover h-4"></img></button></span>
+                    <span className="absolute inset-y-0 right-4 flex items-center pl-2"><button type="submit" className="focus:outline-none"><img src="assets/vectorSearch.png" alt="search" className="object-cover h-4"></img></button></span>
                     <input className="placeholder:text-primary placeholder:font-bold block bg-gray-300 w-full border border-slate-300 rounded-full py-2 pl-9 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Cari Artikel Disini..." type="text" onChange={(e)=>{search(e.target.value)}}/>
                 </div>
             </div>
