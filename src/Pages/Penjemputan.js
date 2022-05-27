@@ -5,24 +5,24 @@ const Penjemputan = () => {
         <>
         <Sidebar>
         <div className="font-poppins mx-12 mt-6 pb-12">
-            <div className="flex justify-between place-items-center mb-8">
-                    <p className="font-bold text-lg">Penjemputan</p>
+            <div className="flex flex-col justify-between mt-8 mb-6 space-y-1">
+                    <p className="font-bold text-xl text-gray-700">Penjemputan</p>
 
-                    <div className="flex gap-x-6 mt-6">
-                    <p className="font-bold mt-3">Pilih Status</p>
-                    <select className="rounded-3xl shadow-md border-white">
+                    <div className="flex gap-x-6 mt-6  md:text-base self-end">
+                    <p className="font-bold mt-3 md:text-base text-sm">Pilih Status</p>
+                    <select className="rounded-3xl shadow-md border-white text-sm md:text-base">
                         <option>Belum Dijemput</option>
                         <option>Selesai</option>
                     </select>
                     </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-x-8">
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
-                    <div className="space-y-4 mb-6">
-                    <div className="flex">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
+                    <div className="space-y-4 mb-8">
+                    <div className="flex justify-between">
                     <p className="text-sm">Sabtu, 09-09-2021</p>
-                    <p className="text-sm font-bold text-secondary ml-12">11.30 WIB</p>
+                    <p className="text-sm font-bold text-secondary">11.30 WIB</p>
                     </div>
 
 
@@ -44,14 +44,14 @@ const Penjemputan = () => {
                     </div> 
                     </div>
                    
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Jemput</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-full font-bold">Jemput</button>
                 </div> 
 
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
                     <div className="space-y-4 mb-6">
-                    <div className="flex">
+                    <div className="flex justify-between">
                     <p className="text-sm">Sabtu, 09-09-2021</p>
-                    <p className="text-sm font-bold text-secondary ml-12">11.30 WIB</p>
+                    <p className="text-sm font-bold text-secondary">11.30 WIB</p>
                     </div>
 
 
@@ -73,14 +73,14 @@ const Penjemputan = () => {
                     </div> 
                     </div>
                    
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Jemput</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-full font-bold">Jemput</button>
                 </div> 
 
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
                     <div className="space-y-4 mb-6">
-                    <div className="flex">
+                    <div className="flex justify-between">
                     <p className="text-sm">Sabtu, 09-09-2021</p>
-                    <p className="text-sm font-bold text-secondary ml-12">11.30 WIB</p>
+                    <p className="text-sm font-bold text-secondary">11.30 WIB</p>
                     </div>
 
 
@@ -102,11 +102,11 @@ const Penjemputan = () => {
                     </div> 
                     </div>
                    
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-full font-bold">Jemput</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-full font-bold">Jemput</button>
                 </div> 
             </div>
 
-            <div className="flex font-poppins justify-center mt-14">
+            <div className="flex font-poppins justify-center mt-10">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
                 <img src="nextLeft.png" className="w-2 h-3"></img>

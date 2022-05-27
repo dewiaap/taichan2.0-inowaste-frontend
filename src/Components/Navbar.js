@@ -12,13 +12,8 @@ const Navbar = () => {
                 )
                 :
                 (
-<<<<<<< HEAD
-                    <div className="sticky top-0 z-50">
-                        <nav className="bg-primary md:bg-primary">
-=======
                     <div className="sticky top-0 z-10">
-                        <nav className="bg-tertiary md:bg-primary">
->>>>>>> 1678b63e771d8fcb19475ce86ad4d88dcf2677dd
+                        <nav className="bg-primary md:bg-primary">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="flex justify-between items-center h-20 w-full font-poppins text-white">
                                     <div className=""><a href="#/"><img src="inowaste2.png" className="object-cover h-20"></img></a></div>

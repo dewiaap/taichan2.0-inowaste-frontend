@@ -9,6 +9,7 @@ module.exports = {
         primarydark: "#01253F",
         secondary : "#EEBF32",
         tertiary : "#58AFD7",
+        tertiarydark: "#4CA0C7",
         secondarylight : "#FFE188",
         secondarylight2: "#FDCF46",
         secondarydark: "#EDB50A",

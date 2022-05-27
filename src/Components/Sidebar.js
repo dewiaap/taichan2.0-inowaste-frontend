@@ -91,18 +91,18 @@ const Sidebar = ({children}) => {
             enter="ease-in-out duration-500 translate-x-0">
             
             {()=>(
-                <aside className="bg-white md:hidden h-fit sticky top-0 bottom-0 shadow-right sticky top-0 md:hidden">
+                <aside className="bg-white md:hidden h-fit sticky top-0 bottom-0 shadow-right md:hidden">
                     
     
-                <div className="text-primary text-lg space-y-2 pt-3">
-                    <div className="hover:bg-secondary py-2 px-6 focus-within:bg-secondary hover:font-semibold focus-within:font-semibold"><a href="#/dashboard" className=" "><p>Dashboard</p></a></div>
-                    <div className="hover:bg-secondary py-2 px-6 focus-within:bg-secondary hover:font-semibold focus-within:font-semibold"><a href="#/permintaan" className=""><p>Permintaan</p></a></div>
-                    <div className="hover:bg-secondary py-2 px-6 focus-within:bg-secondary hover:font-semibold focus-within:font-semibold"><a href="#/galeri" className=""><p>Galeri</p></a></div>
-                    <div className="hover:bg-secondary py-2 px-6 focus-within:bg-secondary hover:font-semibold focus-within:font-semibold"><a href="#/penjemputan" className=""><p>Penjemputan</p></a></div>
+                <div className="text-primary text-lg space-y-2 pt-3 text-center">
+                    <div className="hover:text-secondary py-2  focus-within:text-secondary hover:font-semibold focus-within:font-semibold"><a href="#/dashboard" className=" "><p>Dashboard</p></a></div>
+                    <div className="hover:text-secondary py-2  focus-within:text-secondary hover:font-semibold focus-within:font-semibold"><a href="#/permintaan" className=""><p>Permintaan</p></a></div>
+                    <div className="hover:text-secondary py-2  focus-within:text-secondary hover:font-semibold focus-within:font-semibold"><a href="#/galeri" className=""><p>Galeri</p></a></div>
+                    <div className="hover:text-secondary py-2 hover:font-semibold focus-within:text-secondary focus-within:font-semibold"><a href="#/penjemputan" className=""><p>Penjemputan</p></a></div>
                 </div>
                 {/* mt-36 */}
-                <div className="text-white mt-8 pb-8">
-                    <div className="bg-gray-700 py-2 px-6 focus-within:font-semibold hover:bg-black">
+                <div className="text-gray-700 mt-6 text-lg pb-8 text-center">
+                    <div className=" py-2 px-8 focus-within:font-semibold hover:text-black hover:font-semibold">
                     <a href="#" className=""><p>Keluar</p></a>
                     </div>
                 </div>

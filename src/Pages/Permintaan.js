@@ -4,9 +4,9 @@ const Permintaan = () => {
     return (
         <>
         <Sidebar>
-        <div className="font-poppins mx-12 mt-6 pb-12">
-            <div className="flex flex-col space-y-2 justify-between mb-8">
-                    <p className="font-bold text-lg">Permintaan</p>
+        <div className="font-poppins mx-12 mt-4 md:mt-6 pb-12">
+            <div className="flex flex-col justify-between mt-8 mb-6 space-y-1">
+                    <p className="font-bold text-xl text-gray-700">Permintaan</p>
                     <div className="flex gap-x-6 mt-6 self-end">
                     <p className="font-bold mt-3 text-sm md:text-base">Pilih Status</p>
                     <select className="rounded-3xl text-sm md:text-base shadow-md border-white">
@@ -14,11 +14,10 @@ const Permintaan = () => {
                         <option>Selesai</option>
                     </select>
                     </div>
-                    
             </div>
 
-            <div className="grid grid-cols-3 gap-x-8">
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
+            <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
                     <div className="space-y-4 mb-6">
                     <p className="text-sm">Kamis, 07-09-2021</p>
 
@@ -33,10 +32,10 @@ const Permintaan = () => {
                     </div> 
                     </div>
                    
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
 
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
                     <div className="space-y-4 mb-6">
                     <p className="text-sm">Kamis, 07-09-2021</p>
 
@@ -54,10 +53,10 @@ const Permintaan = () => {
                    
                     
 
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
 
-                <div className="box-border bg-white p-6 rounded-lg shadow-lg">
+                <div className="box-border bg-white p-6 rounded-lg shadow-lg mb-8">
                     <div className="space-y-4 mb-6">
                     <p className="text-sm">Kamis, 07-09-2021</p>
 
@@ -75,11 +74,11 @@ const Permintaan = () => {
                    
                     
 
-                    <button className="text-white bg-tertiary rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
+                    <button className="text-white bg-tertiary hover:bg-tertiarydark rounded-full px-6 py-2 w-fit font-bold">Verifikasi</button>
                 </div> 
             </div>
 
-            <div className="flex font-poppins justify-center mt-14">
+            <div className="flex font-poppins justify-center mt-10">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
                 <img src="nextLeft.png" className="w-2 h-3"></img>

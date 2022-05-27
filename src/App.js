@@ -56,11 +56,11 @@ function App() {
          {/* udah */}
         <Route path="/detailTransaksi" element={<DetailTransaksi />} /> {/* udah */}
         <Route path="/dashboard" element={<Dashboard />} /> {/**udah better */}
-        <Route path="/profilmitra/:id_mitra" element={<ProfilMitra />} />
-        <Route path="/permintaan" element={<Permintaan />} />
-        <Route path="/galeri" element={<Galeri />} />
-        <Route path="/penjemputan" element={<Penjemputan />} />
-        <Route path="/dashboardDriver" element={<DashboardDriver />} />
+        <Route path="/profilmitra/:id_mitra" element={<ProfilMitra />} /> {/**udah better */}
+        <Route path="/permintaan" element={<Permintaan />} /> {/**udah better */}
+        <Route path="/galeri" element={<Galeri />} /> {/**udah better */}
+        <Route path="/penjemputan" element={<Penjemputan />} /> {/**udah better */}
+        <Route path="/dashboardDriver" element={<DashboardDriver />} /> {/**udah better */}
       </Routes>
       {/* <Footer /> */}
     </Router>
