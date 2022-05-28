@@ -66,7 +66,7 @@ const Navbar = () => {
                                                         <MenuList className="z-50">
                                                             {isDriver ? (
                                                                 <>
-                                                                    <MenuItem className="text-lg" onClick={(e) => { navigate("/dashboard") }}>Dashboard</MenuItem>
+                                                                    <MenuItem className="text-lg" onClick={(e) => { navigate("/dashboardDriver") }}>Dashboard</MenuItem>
                                                                     <MenuItem className="text-lg" onClick={(e) => { navigate("/penjemputan") }}>Penjemputan</MenuItem>
                                                                 </>
                                                             ) : (
@@ -185,7 +185,7 @@ const Navbar = () => {
                                                 <div className="flex flex-col">
                                                     {isDriver ? (
                                                         <>
-                                                            <a className="hover:text-secondary" href="#/dashboard">Dashboard</a>
+                                                            <a className="hover:text-secondary" href="#/dashboardDriver">Dashboard</a>
                                                             <a className="hover:text-secondary" href="#/penjemputan">Penjemputan</a>
                                                         </>
                                                     ) : (
