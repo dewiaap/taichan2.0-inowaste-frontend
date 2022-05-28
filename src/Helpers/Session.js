@@ -23,6 +23,8 @@ const isLogin = getData().hasOwnProperty("is_login");
 
 const isAdmin = getData().hasOwnProperty("is_login") ? getData().id_level === 1 : false;
 
+const isDriver = getData().hasOwnProperty("is_login") ? getData().id_level === 3 : false;
+
 const CheckAlreadyLogin = ({ children }) => {
     if (!isLogin) {
         return children
@@ -39,4 +41,4 @@ const CheckNotLogin = ({ children }) => {
     }
 }
 
-export { setData, dataLogin, isLogin, CheckAlreadyLogin, CheckNotLogin, invalidateSession, isAdmin };
+export { setData, dataLogin, isLogin, CheckAlreadyLogin, CheckNotLogin, invalidateSession, isAdmin, isDriver };

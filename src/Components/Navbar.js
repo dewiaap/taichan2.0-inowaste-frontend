@@ -1,11 +1,40 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { isAdmin, isLogin, dataLogin } from "../Helpers/Session";
+import { isAdmin, isLogin, dataLogin, invalidateSession, isDriver } from "../Helpers/Session";
+import { useNavigate, useLocation } from "react-router-dom";
+import swal from "sweetalert";
+import {
+    Menu,
+    MenuHandler,
+    MenuList,
+    MenuItem,
+    Button
+} from "@material-tailwind/react";
+
 const Navbar = () => {
+    const navigate = useNavigate();
+    const location = useLocation().pathname.split("/")[1];
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenAkun, setIsOpenAkun] = useState(false);
+
+    const logout = () => {
+        swal({
+            title: "Yakin Mau Keluar?",
+            text: "Tekan OK jika yakin",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((value) => {
+            if (value) {
+                invalidateSession();
+                window.location.reload();
+            }
+        });
+    };
+
     return (
         <>
-            {isAdmin
+            {["dashboardDriver", "penjemputan", "galeri", "permintaan", "profilmitra", "dashboard"].includes(location)
                 ?
                 (
                     <></>
@@ -13,11 +42,10 @@ const Navbar = () => {
                 :
                 (
                     <div className="sticky top-0 z-10">
-                        <nav className="bg-primary md:bg-primary">
-                        {/* <nav className="bg-tertiary md:bg-primary"> */}
+                        <nav className="bg-primary">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="flex justify-between items-center h-20 w-full font-poppins text-white">
-                                    <div className=""><a href="#/"><img src="inowaste2.png" className="object-cover h-20"></img></a></div>
+                                    <div className=""><a href="#/"><img src="assets/inowaste2.png" className="object-cover h-20"></img></a></div>
                                     <div className="hidden lg:flex">
                                         <span className="ml-6 font-bold text-xl hover:text-secondary"><a href="#/#beranda">Beranda</a></span>
                                         <span className="ml-6 font-bold text-xl hover:text-secondary"><a href="#/mitra">Daftar Mitra</a></span>
@@ -25,16 +53,46 @@ const Navbar = () => {
                                     </div>
                                     {isLogin ?
                                         (
-                                            <div className="hidden md:flex items-center cursor-pointer">
-                                                <img src={dataLogin.gambar_profil} className="rounded-full w-10 h-10 object-cover"/>
-                                                <span className="ml-3 font-bold text-xl">{dataLogin.username}</span>
-                                                <i className="ml-3 fa-solid fa-sort-down"></i>
+                                            <div className="hidden md:flex">
+                                                <div>
+                                                    <Menu>
+                                                        <MenuHandler>
+                                                            <div className="flex items-center cursor-pointer">
+                                                                <img src={dataLogin.gambar_profil} className="rounded-full w-10 h-10 object-cover" />
+                                                                <span className="ml-3 font-bold text-xl">{dataLogin.username}</span>
+                                                                <i className="ml-3 fa-solid fa-sort-down fa-2xs"></i>
+                                                            </div>
+                                                        </MenuHandler>
+                                                        <MenuList className="z-50">
+                                                            {isDriver ? (
+                                                                <>
+                                                                    <MenuItem className="text-lg" onClick={(e) => { navigate("/dashboardDriver") }}>Dashboard</MenuItem>
+                                                                    <MenuItem className="text-lg" onClick={(e) => { navigate("/penjemputan") }}>Penjemputan</MenuItem>
+                                                                </>
+                                                            ) : (
+                                                                isAdmin ?
+                                                                    (<>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/dashboard") }}>Dashboard</MenuItem>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/profil") }}>Permintaan</MenuItem>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/riwayat") }}>Galeri</MenuItem>
+                                                                    </>)
+                                                                    :
+                                                                    (<>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/profil") }}>Profil</MenuItem>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/riwayat") }}>Riwayat</MenuItem>
+                                                                        <MenuItem className="text-lg" onClick={(e) => { navigate("/riwayatPoin") }}>Poin</MenuItem>
+                                                                    </>)
+                                                            )}
+                                                            <MenuItem className="text-lg" onClick={(e) => { logout() }}>Keluar</MenuItem>
+                                                        </MenuList>
+                                                    </Menu>
+                                                </div>
                                             </div>
                                         )
                                         :
                                         (
                                             <div className="hidden md:flex">
-                                                <a href="#/masuk"><button className="bg-secondary hover:bg-secondarydark px-8 py-2 rounded-full font-bold text-xl">Masuk</button></a>
+                                                <a href="#/masuk"><button className="bg-secondary hover:bg-secondarydark px-6 py-2 rounded-full font-bold text-xl">Masuk</button></a>
                                             </div>
                                         )}
 
@@ -116,6 +174,36 @@ const Navbar = () => {
                                                 className="text-white hover:text-secondary block px-3 py-2 rounded-md text-xl font-medium"
                                             >
                                                 Berita
+                                            </a>
+                                            <a className="text-white hover:text-secondary block px-3 py-2 rounded-md text-xl font-medium" onClick={(e) => { setIsOpenAkun(!isOpenAkun) }}>
+                                                <div className="flex items-center">
+                                                    <span>Akun</span>
+                                                    <i className={`ml-3 fa-solid fa-2xs ${isOpenAkun ? "fa-caret-right" : "fa-sort-down"}`}></i>
+                                                </div>
+                                            </a>
+                                            <a className={`ml-4 text-white block px-3 py-2 rounded-md text-lg font-medium cursor-pointer ${isOpenAkun ? "block" : "hidden"}`}>
+                                                <div className="flex flex-col">
+                                                    {isDriver ? (
+                                                        <>
+                                                            <a className="hover:text-secondary" href="#/dashboardDriver">Dashboard</a>
+                                                            <a className="hover:text-secondary" href="#/penjemputan">Penjemputan</a>
+                                                        </>
+                                                    ) : (
+                                                        isAdmin ?
+                                                            (<>
+                                                                <a className="hover:text-secondary" href="#/dashboard">Dashboard</a>
+                                                                <a className="hover:text-secondary" href="#/profil">Permintaan</a>
+                                                                <a className="hover:text-secondary" href="#/riwayat">Galeri</a>
+                                                            </>)
+                                                            :
+                                                            (<>
+                                                                <a className="hover:text-secondary" href="#/profil">Profil</a>
+                                                                <a className="hover:text-secondary" href="#/riwayat">Riwayat</a>
+                                                                <a className="hover:text-secondary" href="#/riwayatPoin">Poin</a>
+                                                            </>)
+                                                    )}
+                                                    <a className="hover:text-secondary" onClick={(e) => { logout() }}>Keluar</a>
+                                                </div>
                                             </a>
                                         </div>
                                     </div>

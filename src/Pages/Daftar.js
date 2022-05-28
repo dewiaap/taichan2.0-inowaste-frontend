@@ -62,7 +62,7 @@ const Daftar = () => {
     }, [onProgress])
     return (
         <>
-            <div className="flex w-full h-full bg-primary md:bg-gradient-to-r md:from-zinc-400 md:via-primary md:to-primary py-10 ">
+            <div className="flex w-full h-full bg-primary md:bg-test py-10 ">
                 <div className="items-center justify-center bg-white border border-light-grey w-5/6 md:w-3/6 h-fit rounded mx-auto py-10 px-6 mb-6 font-poppins mt-10">
                     <h1 className="font-bold mb-2 text-3xl text-center">Daftar</h1>
                     <p className="mt-1 text-center">Sudah punya akun? <a href="#/masuk" className="text-secondary font-bold underline underline-offset-1">Log In</a></p>
@@ -81,7 +81,7 @@ const Daftar = () => {
                         <input type="text" className="block border rounded-lg  border-black w-11/12 mx-auto p-3 mb-4 text-xs" placeholder="Masukkan Nomor Handphone..." value={noHp} onChange={(e) => { setNoHp(e.target.value) }} required />
                         <textarea className="block border rounded-lg border-black w-11/12 h-auto mx-auto mb-4 text-xs align-center" placeholder="Masukkan Alamat dengan format: Jalan, Kelurahan, Kecamatan, Kota, Provinsi, Kode Pos" value={alamat} onChange={(e) => { setAlamat(e.target.value) }} required></textarea>
                         <input type="password" className="block border rounded-lg border-black w-11/12 mx-auto p-3 mb-4 text-xs" placeholder="Masukkan Kata Sandi..." value={password} onChange={(e) => { setPassword(e.target.value) }} required />
-                        <button type="submit" className=" rounded-full w-11/12 mx-4 text-center p-3 bg-secondary text-white hover:bg-tertiary text-xl font-bold focus:outline-none mt-16">
+                        <button type="submit" className=" rounded-full w-11/12 mx-4 text-center p-3 bg-secondary text-white hover:bg-secondarydark text-xl font-bold focus:outline-none mt-16">
                         {onProgress ? (<span className="animate-pulse">Memproses...</span>) : (<>Daftar</>)}
                         </button>
                     </form>

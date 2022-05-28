@@ -17,7 +17,7 @@ const Riwayat = () => {
                     setRiwayat(proses);
                     setDummy(response.data);
                     setIsLoading(false);
-                })
+                }, 2000);
             })
             .catch((err) => {
                 console.log(err);
@@ -69,30 +69,30 @@ const Riwayat = () => {
                                 <div className="absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-secondarylight border-2">
                                     <div className={`mb-10 ml-4 absolute w-3 h-3 border border-white rounded-full -mt-0.25 -left-4 ${status1 ? 'bg-secondary' : 'bg-gray-300'}`}></div>
                                 </div>
-                                <div className="text-sm text-secondary">Permintaan dibuat</div>
-                                <p className={`${!status1 ? "invisible" : ""} " mb-4 text-xs font-normal text-gray-500"`}>Permintaan sedang diproses</p>
+                                <div className="text-sm text-left  text-secondary">Permintaan dibuat</div>
+                                <p className={`${!status1 ? "invisible" : ""} " text-left  mb-4 text-xs font-normal text-gray-500"`}>Permintaan sedang diproses</p>
                             </li>
 
                             <li className="ml-4">
-                                <div className="absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-gray-200 border-2">
+                                <div className={`absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-2 ${status2 ? ' border-secondarylight ' : ' border-gray-200 '}`}>
                                     <div className={`mb-10 ml-4 absolute w-3 h-3 border border-white rounded-full -mt-0.25 -left-4 ${status2 ? 'bg-secondary' : 'bg-gray-300'}`}></div>
                                 </div>
-                                <div className="text-sm text-gray-400">Permintaan dikonfirmasi</div>
-                                <p className={`${!status2 ? "invisible" : ""} " mb-4 text-xs font-normal text-gray-500"`}>Permintaan telah dikonfirmasi oleh mitra. Minyak akan diambil sesuai tanggal penjemputan yang telah Anda pilih.</p>
+                                <div className={`text-sm text-left ${!status2 ? "text-gray-400" : "text-secondary"}`}>Permintaan dikonfirmasi</div>
+                                <p className={`${!status2 ? "invisible" : ""} " text-left  mb-4 text-xs font-normal text-gray-500"`}>Permintaan telah dikonfirmasi oleh mitra. Minyak akan diambil sesuai tanggal penjemputan yang telah Anda pilih.</p>
                             </li>
                             <li className="ml-4">
-                                <div className="absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-gray-200  border-2">
+                                <div className={`absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-2 ${status3 ? ' border-secondarylight ' : ' border-gray-200 '}`}>
                                     <div className={`mb-10 ml-4 absolute w-3 h-3 border border-white rounded-full -mt-0.25 -left-4 ${status3 ? 'bg-secondary' : 'bg-gray-300'}`}></div>
                                 </div>
-                                <div className="text-sm text-secondary text-gray-400">Pengambilan minyak</div>
-                                <p className={`${!status3 ? "invisible" : ""} " mb-4 text-xs font-normal text-gray-500"`}>Driver sedang menuju tempatmu untuk mengambil minyak</p>
+                                <div className={`text-sm text-left  ${!status3 ? "text-gray-400" : "text-secondary"}`}>Pengambilan minyak</div>
+                                <p className={`${!status3 ? "invisible" : ""} " text-left  mb-4 text-xs font-normal text-gray-500"`}>Driver sedang menuju tempatmu untuk mengambil minyak</p>
                             </li>
                             <li className="ml-4">
-                                <div className="absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-gray-200  border-2">
+                                <div className={`absolute w-4 h-4 rounded-full mt-0.5 -left-2 border border-2 ${status4 ? ' border-secondarylight ' : ' border-gray-200 '}`}>
                                     <div className={`mb-10 ml-4 absolute w-3 h-3 border border-white rounded-full -mt-0.25 -left-4 ${status4 ? 'bg-secondary' : 'bg-gray-300'}`}></div>
                                 </div>
-                                <div className="text-sm text-secondary text-gray-400">Minyak diterima</div>
-                                <p className={`${!status4 ? "invisible" : ""} " mb-4 text-xs font-normal text-gray-500"`}>Minyak telah diterima oleh Mitra </p>
+                                <div className={`text-sm text-left  ${!status4 ? "text-gray-400" : "text-secondary"}`}>Minyak diterima</div>
+                                <p className={`${!status4 ? "invisible" : ""} " text-left  mb-4 text-xs font-normal text-gray-500"`}>Minyak telah diterima oleh Mitra </p>
                             </li>
                         </ol>
                     </div>
@@ -120,8 +120,56 @@ const Riwayat = () => {
                             </select>
                         </div>
                         {isLoading ? (
-                            <>
-                            </>
+                            <div>
+                                <div className="container box-border w-full h-auto border-2 border-gray-100 p-4 mt-8 mr-12 rounded-md shadow-md grid grid-cols-1 md:grid-cols-2 devide-x animate-pulse">
+                                    <div className="box-content ml-2 md:ml-6 mt-3 text-xs md:text-sm">
+                                        <div className="bg-gray-400 h-4 w-1/2 rounded-full"></div>
+                                        <div className="bg-gray-400 h-4 w-1/3 rounded-full my-3"></div>
+                                        <div className="mt-8 container flex justify-center items-center box-border border-2 w-32 h-16 rounded-md bg-gray-400 shadow-md">
+                                        </div>
+                                    </div>
+                                    <div className="box-content mt-3 mr-6 text-sm md:text-sm text-left md:text-right">
+                                        <div className="md:block md:flex-row flex flex-col justify-end">
+                                            <div className="bg-gray-400 h-4 w-full  md:mx-auto mx-2 rounded-full"></div>
+                                        </div>
+                                        <p className="box-content mx-2 mt-4 md:mx-4 md:mt-16 bg-gray-400 h-6 w-full rounded-full"></p>
+
+                                        <div className="box-border grid grid-cols-1 md:grid-cols-2 divide-y-2">
+                                            <div className="container flex justify-center items-center mt-8 text-md mr-3 h-10 font-bold rounded-full bg-gray-400 border-2 ">
+                                                <button></button>
+                                            </div>
+                                            <div className="container flex justify-center items-center mt-8 text-md ml-3 h-10 font-bold rounded-full bg-gray-400">
+                                                <a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container box-border w-full h-auto border-2 border-gray-100 p-4 mt-8 mr-12 rounded-md shadow-md grid grid-cols-1 md:grid-cols-2 devide-x animate-pulse">
+                                    <div className="box-content ml-2 md:ml-6 mt-3 text-xs md:text-sm">
+                                        <div className="bg-gray-400 h-4 w-1/2 rounded-full"></div>
+                                        <div className="bg-gray-400 h-4 w-1/3 rounded-full my-3"></div>
+                                        <div className="mt-8 container flex justify-center items-center box-border border-2 w-32 h-16 rounded-md bg-gray-400 shadow-md">
+                                        </div>
+                                    </div>
+                                    <div className="box-content mt-3 mr-6 text-sm md:text-sm text-left md:text-right">
+                                        <div className="md:block md:flex-row flex flex-col justify-end">
+                                            <div className="bg-gray-400 h-4 w-full  md:mx-auto mx-2 rounded-full"></div>
+                                        </div>
+                                        <p className="box-content mx-2 mt-4 md:mx-4 md:mt-16 bg-gray-400 h-6 w-full rounded-full"></p>
+
+                                        <div className="box-border grid grid-cols-1 md:grid-cols-2 divide-y-2">
+                                            <div className="container flex justify-center items-center mt-8 text-md mr-3 h-10 font-bold rounded-full bg-gray-400 border-2 ">
+                                                <button></button>
+                                            </div>
+                                            <div className="container flex justify-center items-center mt-8 text-md ml-3 h-10 font-bold rounded-full bg-gray-400">
+                                                <a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         ) : (
                             riwayat.map((item, index) => {
                                 return (
@@ -130,7 +178,7 @@ const Riwayat = () => {
                                             <div className="box-content ml-2 md:ml-6 mt-3 text-xs md:text-sm">
                                                 <span className="text-gray-500">{moment(item.created_at).format('DD MMMM YYYY')}</span>
                                                 <div className="my-3 font-bold text-sm md:text-md">
-                                                    <p>{item.nama_lengkap}</p>
+                                                    <p>{item.mitra.nama_lengkap}</p>
                                                 </div>
                                                 <div className="container flex justify-center items-center box-border border-2 w-32 h-16 rounded-md font-extrabold text-lg md:text-2xl text-primary shadow-md">
                                                     <p className="">{item.liter} Liter</p>
@@ -143,10 +191,10 @@ const Riwayat = () => {
                                                 <p className="box-content mx-2 mt-4 md:mx-4 md:mt-16 text-primary font-bold text-md md:text-lg">+{item.liter * item.mitra.poin} Poin</p>
 
                                                 <div className="box-border grid grid-cols-1 md:grid-cols-2 divide-y-2">
-                                                    <div className="container flex justify-center items-center mt-8 text-md mr-3 h-10 font-bold rounded-full text-black border-2 border-secondary">
+                                                    <div className="container flex justify-center items-center mt-8 text-md mr-2 h-10 font-bold rounded-full text-secondary hover:scale-x-110">
                                                         <button onClick={(e) => { showModal(item) }}>Lihat detail transaksi</button>
                                                     </div>
-                                                    <div className="container flex justify-center items-center mt-8 text-md ml-3 h-10 font-bold rounded-full bg-secondary text-white">
+                                                    <div className="container flex justify-center items-center mt-8 text-md ml-3 h-10 font-bold rounded-full hover:bg-secondarydark bg-secondary text-white">
                                                         <a href={"#/mitra/" + item.id_mitra}>
                                                             Tukar Kembali
                                                         </a>

@@ -225,7 +225,7 @@ const DetailMitra = () => {
                                         <input type="number" className="block border border-gray-300 rounded-lg shadow-md w-11/12 p-3 mt-2 placeholder:text-center text-xs" min={5} name="liter" onChange={(e) => { setLiter(e.target.value) }} />
                                     </div>
                                     <div className="flex mx-auto md:justify-start">
-                                        <button type="submit" className="rounded-full w-11/12 md:w-1/3 md:px-16 md:py-3 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary text-lg focus:outline-none mb-16">
+                                        <button type="submit" className="rounded-full w-11/12 md:w-1/3 md:px-16 md:py-3 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-secondarydark text-lg focus:outline-none mb-16">
                                             {onProgress ? (<span className="animate-pulse">Memproses...</span>) : (<>Kirim</>)}
                                         </button>
                                     </div>

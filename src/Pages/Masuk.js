@@ -38,7 +38,7 @@ const Masuk = () => {
     return (
         <>
             <CheckAlreadyLogin>
-                <div className="w-full h-screen md:bg-gradient-to-r bg-primary md:from-gray-400 md:via-primary md:to-primary">
+                <div className="w-full h-screen md:bg-test md:bg-primary bg-primary md:from-gray-400 md:via-primary md:to-primary">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="hidden md:flex justify-center self-center">
                             <span className="font-poppins font-medium text-5xl text-white">Be Hero to Zero Waste</span>
@@ -53,7 +53,7 @@ const Masuk = () => {
                                     <input type="text" className="block border rounded-lg border-black w-full mx-auto p-3 mb-4 mt-8 font-poppins text-xs" placeholder="Email atau Username" onChange={(e) => { setUsername(e.target.value) }} />
                                     <input type="password" className="block border rounded-lg border-black w-full mx-auto p-3 mb-4 font-poppins text-xs" placeholder="Kata Sandi" onChange={(e) => { setPassword(e.target.value) }} />
                                     <a href="" className="underline float-right font-semibold underline-offset-1">Lupa kata sandi?</a>
-                                    <button type="submit" className={`${onProgress ? 'px-8' : 'px-16'} rounded-full py-2 w-full text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary mt-6 text-lg focus:outline-none my-1`}>
+                                    <button type="submit" className={`${onProgress ? 'px-8' : 'px-16'} rounded-full py-2 w-full text-center p-3 bg-secondary text-white font-bold hover:bg-secondarydark mt-6 text-lg focus:outline-none my-1`}>
                                         {onProgress ? (<span className="animate-pulse">Memproses...</span>) : (<>Masuk</>)}
                                     </button>
                                 </form>
