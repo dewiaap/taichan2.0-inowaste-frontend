@@ -24,7 +24,7 @@ const Dashboard = () => {
     }, [isLoading])
     return (
         <>
-        <Sidebar>
+        <Sidebar active={"dashboard"}>
         <div className="font-poppins mx-12 mt-4 md:mt-6 pb-12">
             <div className="flex flex-col space-y-2 justify-between mb-8">
                     <div className="font-bold text-lg"><p>Dashboard</p></div>

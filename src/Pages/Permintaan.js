@@ -3,7 +3,7 @@ import Sidebar from "../Components/Sidebar";
 const Permintaan = () => {
     return (
         <>
-        <Sidebar>
+        <Sidebar active="permintaan">
         <div className="font-poppins mx-12 mt-6 pb-12">
             <div className="flex flex-col space-y-2 justify-between mb-8">
                     <p className="font-bold text-lg">Permintaan</p>
@@ -17,7 +17,7 @@ const Permintaan = () => {
                     
             </div>
 
-            <div className="grid grid-cols-3 gap-x-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8">
                 <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
                     <div className="space-y-4 mb-6">
                     <p className="text-sm">Kamis, 07-09-2021</p>
@@ -82,7 +82,7 @@ const Permintaan = () => {
             <div className="flex font-poppins justify-center mt-14">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextLeft.png" className="w-2 h-3"></img>
+                <img src="assets/nextLeft.png" className="w-2 h-3"></img>
                 </div>
             </button>
             <button className="hover:bg-secondary hover:text-white active:bg-secondary active:text-white border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
@@ -99,7 +99,7 @@ const Permintaan = () => {
             </button>
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextRight.png" className="w-2 h-3"></img>
+                <img src="assets/nextRight.png" className="w-2 h-3"></img>
                 </div>
             </button>
             </div>

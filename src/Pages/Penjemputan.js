@@ -3,7 +3,7 @@ import Sidebar from "../Components/Sidebar";
 const Penjemputan = () => {
     return (
         <>
-        <Sidebar>
+        <Sidebar active="penjemputan">
         <div className="font-poppins mx-12 mt-6 pb-12">
             <div className="flex justify-between place-items-center mb-8">
                     <p className="font-bold text-lg">Penjemputan</p>
@@ -17,7 +17,7 @@ const Penjemputan = () => {
                     </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-x-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8">
                 <div className="box-border bg-white p-6 rounded-lg shadow-lg ">
                     <div className="space-y-4 mb-6">
                     <div className="flex">
@@ -36,7 +36,7 @@ const Penjemputan = () => {
                     </div> 
 
                     <div>
-                        <img src="nextDown.png"></img>
+                        <img src="assets/nextDown.png"></img>
                     </div>
                     <div>
                     <p className="font-bold text-sm">PT Green Energi Utama</p>
@@ -65,7 +65,7 @@ const Penjemputan = () => {
                     </div> 
 
                     <div>
-                        <img src="nextDown.png"></img>
+                        <img src="assets/nextDown.png"></img>
                     </div>
                     <div>
                     <p className="font-bold text-sm">PT Green Energi Utama</p>
@@ -94,7 +94,7 @@ const Penjemputan = () => {
                     </div> 
 
                     <div>
-                        <img src="nextDown.png"></img>
+                        <img src="assets/nextDown.png"></img>
                     </div>
                     <div>
                     <p className="font-bold text-sm">PT Green Energi Utama</p>
@@ -109,7 +109,7 @@ const Penjemputan = () => {
             <div className="flex font-poppins justify-center mt-14">
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextLeft.png" className="w-2 h-3"></img>
+                <img src="assets/nextLeft.png" className="w-2 h-3"></img>
                 </div>
             </button>
             <button className="hover:bg-secondary hover:text-white active:bg-secondary active:text-white border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
@@ -126,7 +126,7 @@ const Penjemputan = () => {
             </button>
             <button className="hover:bg-secondary border border-2 border-secondary w-8 h-8 rounded-lg mx-1">
                 <div className="py-2 px-2">
-                <img src="nextRight.png" className="w-2 h-3"></img>
+                <img src="assets/nextRight.png" className="w-2 h-3"></img>
                 </div>
             </button>
             </div>

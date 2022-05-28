@@ -103,7 +103,30 @@ const Poin = () => {
                             <div className="border-b text-center py-1 border-primary"><a href="#" className="text-primary font-bold">Tukar Poin</a></div>
                         </div>
 
-                        {isLoading ? (<></>) : (
+                        {isLoading ? (
+                            <div>
+                                <div className="px-14 animate-pulse">
+                                    <div className="container box-border grid grid-cols-4 bg-white p-4 shadow-md my-6 rounded-md">
+                                        <div className="col-span-2 md:col-span-1 h-28 w-46 rounded bg-gray-400 mr-6"></div>
+                                        <div className="col-span-2 md:col-span-3">
+                                            <p className="h-6 w-1/3 bg-gray-400 rounded-full mt-2"></p>
+                                            <p className="h-4 w-full bg-gray-400 rounded-full mt-2"></p>
+                                            <p className="h-4 w-1/4 bg-gray-400 rounded-full mt-8"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="px-14 animate-pulse">
+                                    <div className="container box-border grid grid-cols-4 bg-white p-4 shadow-md my-6 rounded-md">
+                                        <div className="col-span-2 md:col-span-1 h-28 w-46 rounded bg-gray-400 mr-6"></div>
+                                        <div className="col-span-2 md:col-span-3">
+                                            <p className="h-6 w-1/3 bg-gray-400 rounded-full mt-2"></p>
+                                            <p className="h-4 w-full bg-gray-400 rounded-full mt-2"></p>
+                                            <p className="h-4 w-1/4 bg-gray-400 rounded-full mt-8"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : (
                             voucher?.map((item, index) => {
                                 return (
                                     <div key={index} className="cursor-pointer" onClick={(e) => { showModal(item) }}>
