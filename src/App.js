@@ -11,7 +11,7 @@ import Daftar from './Pages/Daftar';
 import RiwayatPoin from './Pages/RiwayatPoin';
 import TukarPoin from './Pages/TukarPoin';
 import Riwayat from './Pages/Riwayat';
-import DetailTransaksi from './Pages/DetailTransaksi';
+// import DetailTransaksi from './Pages/DetailTransaksi';
 import Dashboard from './Pages/Dashboard';
 import Permintaan from './Pages/Permintaan';
 import Galeri from './Pages/Galeri';
@@ -54,7 +54,7 @@ function App() {
         {/* udah */}
         <Route path="/riwayat" element={<Riwayat />} />
          {/* udah */}
-        <Route path="/detailTransaksi" element={<DetailTransaksi />} /> {/* udah */}
+        {/* <Route path="/detailTransaksi" element={<DetailTransaksi />} /> udah */}
         <Route path="/dashboard" element={<Dashboard />} /> {/**udah better */}
         <Route path="/profilmitra/:id_mitra" element={<ProfilMitra />} /> {/**udah better */}
         <Route path="/permintaan" element={<Permintaan />} /> {/**udah better */}
