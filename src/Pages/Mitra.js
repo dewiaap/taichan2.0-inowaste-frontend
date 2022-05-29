@@ -51,7 +51,7 @@ const Mitra = () => {
                     <h1 className="font-bold text-3xl md:text-4xl text-white leading-relaxed">Mengumpulkan dan Mengolah Kembali Minyak Jelantah</h1>
                     <p className="font-medium text-xl md:text-2xl text-white mt-5">Bergabunglah bersama kami menjadi mitra Inowaste dan dapatkan minyak jelantah dengan mudah!</p>
                     <div className="flex justify-center md:justify-start">
-                        <button className=" rounded-full w-full md:w-56 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-tertiary text-lg focus:outline-none mb-16">Daftar Disini
+                        <button className=" rounded-full w-full md:w-56 mt-12 text-center p-3 bg-secondary text-white font-bold hover:bg-secondarydark text-lg focus:outline-none mb-16">Daftar Disini
                         </button>
                     </div>
                 </div>
